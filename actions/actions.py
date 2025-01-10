@@ -69,3 +69,5 @@ class ActionCollectInfo(Action):
             dispatcher.utter_message(text=f"An error occurred: {str(e)}")
 
         return []
+    
+
