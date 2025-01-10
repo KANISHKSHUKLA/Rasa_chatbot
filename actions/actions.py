@@ -29,9 +29,12 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import google.generativeai as genai
+import os
 
 # Configure the Gemini API key
-genai.configure(api_key="")
+google_api_key = os.getenv("GOOGLE_API_KEY")
+genai.configure(api_key=google_api_key)
+
 
 class ActionCollectInfo(Action):
     def name(self) -> Text:

@@ -1,9 +1,10 @@
 import streamlit as st
 import requests
 import google.generativeai as genai
+import os
 
 # Configure the Gemini API
-GENAI_API_KEY = "AIzaSyCiU7kn-wpclJ0XK6pKoGHTEJYvlCA07No"
+GENAI_API_KEY = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=GENAI_API_KEY)
 
 # Streamlit app configuration
