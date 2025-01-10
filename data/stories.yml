@@ -1,30 +1,16 @@
 version: "3.1"
 
 stories:
-
-- story: happy path
+- story: Greet and collect info
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: provide_info
+  - action: action_collect_info
   - intent: affirm
-  - action: utter_happy
+  - action: utter_confirm
 
-- story: sad path 2
+- story: Goodbye
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - intent: goodbye
   - action: utter_goodbye
